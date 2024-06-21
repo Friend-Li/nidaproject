@@ -1,0 +1,236 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Commission Form</title>
+    <!--The CSS File-->
+    <link rel="stylesheet" href="commisonLook.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudfkare,com/ajax/libs/font -awesome/4.7.0/css/font-awesome.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+ <!--This is the main body of the code that will create the forum-->
+<body>
+  <div class="container">
+    <div class="title">Commission Form</div>
+    <form action="#">
+      <h4><br>After you fill out this form, please direct message me to go over details,
+        availability, & payment before the order is completed, This is a quick survey to
+        figure out your perfect custom jewerly.
+      </h4>
+
+      <!--These are the checkboxes to determine types of items and 
+      the numbers of items the customers want to pay. 
+      This is question number 1
+    -->
+      <form id="contact-form" method="POST" action="sendingemail.php">
+        <div class="Checkboxes">
+          <span class="checkers-title"><br>What would you like to order?
+          </span>
+            <label class="container"><br>1 necklace for $30
+              <input type="checkbox" checked="checked" name = "checks">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container" name = "checks"><br>2 necklaces for $45
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container" name = "checks"><br>2 necklaces and earring set for $40(one each)
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container" name = "checks"><br>1 pair of earrings for $15
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container" name = "checks"><br>2 pairs of earrings for $15
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container" name = "checks"><br>1 Bracelet for $20
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container" name = "checks"><br>2 Bracelets for $30
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+             <label class="container" name = "checks"><br>Other, not specified
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+        </div>
+
+        <!--
+          This is where the user will be ask the type of third party payment system
+          they will be using and the username their account is under for 
+          their payment provider
+        -->
+        <div class="input-box">
+          <span class="details-payment"><br>How will you purchase?
+            (PayPal?Venmo?Cashapp?) Please write down the payment app and your username.
+            <br>
+            <input type="text" name = "payment"placeholder="Enter your payment">
+            <br>
+            <input type="text" name = "payname" placeholder="Enter your username">
+          </span>
+        </div>
+        <!--
+          This is the have the user understand the terms of conditions
+          of buying from Nida
+        -->
+        <div class="Checkboxes">
+          <span class="checkers-title"><br>Please Check Mark All Rules to Qualify
+          </span>
+            <label class="container"><br>I understand that I will pay first(Once we begin messaging, I will
+              ask for payment don't worry!)
+              <input type="checkbox" checked="checked" required>
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"><br>I understand that there are no refunds
+              <input type="checkbox" required>
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"><br>I understand that I will need to communicate to create my vision
+              <input type="checkbox">
+              <span class="checkmark" required></span>
+            </label>
+            <label class="container"><br>I understand that outsoucing beads will add to my final price
+              <input type="checkbox" required>
+              <span class="checkmark" ></span>
+            </label>
+            <label class="container"><br>I understand that international shipping is not free, and will be included in your fee
+              <input type="checkbox" required>
+              <span class="checkmark"></span>
+            </label>
+        </div>
+        <!--Just a funny message she has-->
+        <h4><br>Your Preferences!<br>
+        The fun part ;)</h4>
+        <!--
+          These the descriptions that will help nida to create
+          an customized jewerly that best tailors towards
+          the customers interests
+        -->
+        <div class="input-box">
+          <span class="details"><br> What colors do you prefer? what are your favorite colors?<br>
+            <input type="text" name = "color1"placeholder="Enter your color(s)">
+          </span>
+        </div>
+        <div class="input-box">
+          <span class="details"><br>What colors do you wear the most?<br>
+            <input type="text" name = "color2" placeholder="Enter your color(s)">
+          </span>
+        </div>
+        <div class="input-box">
+          <span class="details"><br>What celebrity/public figure(musician, actor, influencer,etc.) do you take style<br>
+            inspiration from?
+            <input type="text" name = "publicFig" placeholder="Enter here">
+          </span>
+        </div>
+        <div class="input-box">
+          <span class="details"><br>What style are you going for(example: preppy, gothic, alternative, academia, minimal, clutter-core, maximalist, dainty, chuncky etc.)?
+            <br>
+            <input type="text" name = "style" placeholder="Enter your style">
+          </span>
+        </div>
+        
+        <!--
+          This is an option where the user wants the product to be within
+          their comfort zone or not
+        -->
+        <div class="comfort-zone">
+          <input type="radio" name="option" id="dot-1">
+          <input type="radio" name="option" id="dot-2">
+          <span class="confort-title"><br>Would you like jewelry within your confort zone 
+            or outside of your comfort zone?
+          </span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="option">Within my comfort zone.</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="option">Outside of my comfort zone.</span>
+            </label>
+          </div>
+        </div>
+
+        <br>
+        <h4>
+        Please share a screenshot of any of the following(The more pictures, the better):
+        [Please share them at my Social Medias]
+        </h3>
+        <p>
+        -Jewelry inspiration
+        <br>
+        -Your favority outfit(doesn not have to be worn, you can send pics of just the clothing
+        laid out)
+        <br>
+        -Outfit inspiration
+        <br>
+        -Your overall aesthetic
+        <br>
+        -Celebrity figure/style inspiration
+        <br>
+        -Themes/concepts that you like
+        </p>
+        <br>
+<!--
+        <h4>
+          Upload them here if you'd like, or share it with me in chat <3
+        </h4>
+        <div class="download">
+          <br>
+            <form>
+              <button><i class='fas fa-file-download'></i></button>
+            </form>
+        </div>
+      -->
+        <h4>
+          <br>
+          Order Form/Contact Info
+        </h4>
+        <p>For shipping purposes. Free Shipping provided!!!</p>
+
+        <div class="input-box">
+          <span class="details"><br>Your Full Name
+            <input type="text" placeholder="Enter your name">
+          </span>
+        </div>
+        <div class="input-box">
+          <span class="details"><br>Instagram Username
+            <input type="text" placeholder="Enter your username">
+          </span>
+        </div>
+        <div class="input-box">
+          <span class="details"><br>Your Address, please write this as clear as possible 
+            <input type="text" placeholder="Enter your address">
+          </span>
+        </div>
+        <div class="input-box">
+          <span class="details"><br>Double check your address
+            <input type="text" placeholder="Enter your address">
+          </span>
+        </div>
+        <div class="input-box">
+          <span class="details"><br>Phone number or Email(for you to track)
+            <input type="text" placeholder="Enter here">
+          </span>
+        </div>
+
+        <!--
+          The submit button
+        -->
+        <div>
+          <div class="button">
+            <br>
+            <input type="submit" value="Submit">
+          </div>
+        </div>
+
+      </div>
+    </form> 
+  </form>
+</body>
+</html>
