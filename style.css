@@ -7,6 +7,8 @@
     text-decoration: none;
 }
 
+
+
 header{
     position: fixed;
     right: 0;
@@ -23,22 +25,28 @@ header{
 .logo{
     font-size: 30px;
     font-weight: 700;
-    color: #7c0004;
-    margin-right: 30px;
+    color: #7c0004; 
 }
 
 .navlist{
     display: flex;
     text-transform: uppercase;
+    list-style: none;
+    position: fixed;
+    left: 50px;
+    margin-left: 50px;
+    
+   
 }
 
 .navlist a, #scroll-up-link a{
-    color: #7c0004;
-    margin-left: 60px;
-    font-size: 17px;
+    color: #1e0c0c;
+    margin-left: 20px;
+    font-size: 13px;
     font-weight: 600;
     border-bottom: 2px solid transparent;
     transition: all .55s ease;
+    
 }
 
 .navlist a:hover, #scroll-up-link a:hover {
@@ -64,7 +72,7 @@ header{
     height: 100%;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(109.1deg, rgb(181, 73, 91) 7.1%, rgb(195, 113, 136) 86.4%);
+    background: linear-gradient(109.1deg, rgb(198, 107, 122) 7.1%, rgb(239, 147, 173) 86.4%);
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -76,20 +84,30 @@ section {
     padding: 0 19%;
 }
 
+.jewelery-text h1 p{
+    background-color: rgb(242, 223, 223);
+    border-radius: 25px;
+
+}
+
 .jewelery-text h1 {
     font-family: "Playfair Display", serif;
     font-size: 70px;
     line-height: 1;
-    color: #7c0004;
+    color: #5e080f;
     margin: 0 0 20px;
+    margin-left: 20px;
+
 
 }
 
 .jewelery-text p {
-    color: #7c0004;
+    color: #3d090b;
     font-size: 15px;
     line-height: 1.9;
+    margin-left:20px;
     margin-bottom: 40px;
+    
 }
 
 .jewelery-text a {
@@ -98,7 +116,7 @@ section {
     background: #7c0004;
     border: 1px solid transparent;
     padding: 12px 30px;
-    margin-left: 20px;
+    margin-left: 10px;
     line-height: 1.4;
     font-size: 14px;
     font-weight: 500;
@@ -128,11 +146,12 @@ section {
     vertical-align: middle;
     margin-right: 5px;
 }
-
+*
 
 .jewelery-logo img {
     width: 500px;
     height: auto;
+    margin-right: 50px;
 }
 
 .icons {
@@ -190,6 +209,15 @@ section {
     background: transparent;
     padding-bottom: 50px;
     transition: all .55s ease;
+}
+
+.scroll-up-text {
+    position: absolute;
+    bottom: 6%;
+    right: 12%;
+    display: block;
+    padding: 12px;
+    font-size: 15px;
 }
 
 #scroll-up-link a {
