@@ -1,0 +1,63 @@
+from django.shortcuts import render, redirect
+from .models import Product, Cart, CartItem
+from django.http import JsonResponse
+import json
+from django.contrib import messages
+from django.contrib.auth import authenticate, login
+import uuid
+# Create your views here.
+
+
+
+def index(request):
+    products = Product.objects.all()
+    
+    context = {"products":products}
+    return render(request, "index.html", context)
+
+
+def cart(request):
+    
+    context = {}
+    return render(request, "cart.html", context)
+
+def add_to_cart(request):
+    data = json.load(request.body)
+    product_id = data["id"]
+    product = Product.objects.get(id=product_id)
+
+    if request.user.is_authenticated:
+        cart, created = Cart.objects.get_or_create(user=request.user, completed=False)
+        cartitem, created = CartItem.objects.get_or_create(cart=cart, product=product)
+        cartitem.quantity += 1
+        cartitem.save()
+        num_of_item = cart.num_of_items
+
+    else:
+
+        try:
+            cart = Cart.objectes.get(session_id = request.session['nonuser'], completed=False)
+            cartitem.quantity += 1
+            cartitem.save()
+            num_of_item = cart.num_of_items 
+
+        except:
+            request.session['nonuser'] = str(uuid.uuid4)
+            cart = Cart.objects.create(session_id = request.session['nonuser'], completed=False)
+            cartitem, created = CartItem.objects.get_or_create(cart=cart, product=product)
+            cartitem.quantity += 1
+            cartitem.save()
+            num_of_item = cart.num_of_items
+
+        num_of_item = cart.num_of_items       
+
+        print(cartitem)
+    return JsonResponse(num_of_item, safe=False)
+
+
+#def confirm_payment(request, pk):
+#    cart = Cart.objects.get(id=pk)
+#    cart.completed = True
+#    cart.save(0)
+#    messages.success(request, "payment made successfully")
+#    return redirect("index")
