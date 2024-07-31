@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:  "Literata", serif;
+  box-sizing: border-box
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(109.1deg, rgb(198, 107, 122) 7.1%, rgb(239, 147, 173) 86.4%);
+}
+
+header{
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 9%;
+  background: transparent;
+}
+
+.logo{
+  font-size: 30px;
+  font-weight: 700;
+  color: #7c0004; 
+}
+
+.navlist{
+  display: flex;
+  text-transform: uppercase;
+  list-style: none;
+  position: fixed;
+  left: 50px;
+  margin-left: 50px;
+  
+ 
+}
+
+.navlist a, #scroll-up-link a{
+  color: #1e0c0c;
+  margin-left: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+  
+}
+
+.navlist a:hover, #scroll-up-link a:hover {
+  color:#cb1711;
+  border-bottom: 2px solid #cb1711;
+}
+
+
+.logo i:hover {
+  color: #cb1711; 
+}
+
+.about-section{
+  background: url(PFP.jpg) no-repeat left;
+  background-size: 55%;
+  background-color: linear-gradient(109.1deg, rgb(198, 107, 122) 7.1%, rgb(239, 147, 173) 86.4%);
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.inner-container{
+  width: 65%;
+  float: right;
+  background-color: #fdfdfd;
+  padding: 30px;
+}
+
+.inner-container h1{
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.text{
+  font-size: 18px;
+  color: #545454;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.skills a{
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 700;
+  font-size: 13px;
+  color: rgb(242, 140, 157);
+  transition: all .55s ease;
+}
+
+.skills a:hover{
+  background: transparent;
+  border: 1px solid white;
+  transform: translateX(8px);
+  color:rgb(254, 69, 100);
+}
+
+.skills2 a{
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: rgb(242, 140, 157);
+  transition: all .55s ease;
+}
+
+.skills2 a:hover{
+  background: transparent;
+  border: 1px solid white;
+  transform: translateX(8px);
+  color:rgb(254, 69, 100);
+}
+
+@media screen and (max-width:1200px){
+  .inner-container{
+    padding: 80;
+  }
+}
