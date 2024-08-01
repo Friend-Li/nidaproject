@@ -25,7 +25,7 @@ def add_to_cart(request):
     data = json.load(request.body)
     product_id = data["id"]
     product = Product.objects.get(id=product_id)
-    return JsonResponse("it worked", safe=False
+    return JsonResponse("it worked", safe=False)
 
 
 
