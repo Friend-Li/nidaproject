@@ -32,9 +32,13 @@ function addToCart(e){
 
     let data = {id:product_id}
 
-#    fetch(url, {
-#        method: "POST", #       headers: {"Content-Type":"application/json", #'X-CSRFToken': csrftoken},
-#         body: JSON.stringify(data)
+    fetch(url, {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body:JSON.stringify(data
+    })        
+}
+
 #    })
 #    .then(res=>res.json())
 #    .then(data=>{
