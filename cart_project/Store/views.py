@@ -18,7 +18,11 @@ def index(request):
 
 def cart(request):
     
-    context = {}
+    if request.user.is_authenticated:
+        cart, created = Cart.objects.get_or_create(user=request.user, completed=False)
+        cartitem = cart.cartitems.all()
+    
+    context = {"cart":cart, "items":cartitems}
     return render(request, "cart.html", context)
 
 def add_to_cart(request):
