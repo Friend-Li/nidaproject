@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" 
+          content="IE=edge">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+
+    <img src = "StrawberryNida.png"
+        title="StrawberryNida's Survey Form"
+        height="190"
+        width="685"
+        >
+    <style>
+        /* Styling the Body element 
+        i.e. Color, Font, Alignment */
+        body {
+            background-image: url('https://www.eatthis.com/wp-content/uploads/sites/4/2022/07/strawberries.jpg?quality=82&strip=1&w=1400');
+            background-color: #f7a9d3;
+            font-family: Playfair display;
+            text-align: center;
+        }
+
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color:#e15583
+;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(198, 82, 144, 0.5);
+        }
+
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Styling form-control input, 
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: literata;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+
+        /* Styling form-control Radio 
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+
+        /* Styling Button */
+        button {
+            background-color: #efb5cd;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+<body>
+    <h1>Survey Time!</h1>
+
+    <!-- Create Form -->
+    <form id="form">
+
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+
+            <!-- Input Type Text -->
+            <input type="text" id="name" 
+                   placeholder="Enter your name" />
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+
+            <!-- Input Type Email-->
+            <input type="email" id="email" 
+                   placeholder="Enter your email" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Age
+            </label>
+
+            <!-- Input Type Text -->
+            <input type="text" id="age" 
+                   placeholder="Enter your age" />
+        </div>
+
+        <div class="form-control">
+            <label for="role" id="label-role">
+                Which option best describes you?
+            </label>
+
+            <!-- Dropdown options -->
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">
+                    Professional
+                </option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label>
+                Would you recommend StrawberryNida
+                to a friend?
+            </label>
+
+            <!-- Input Type Radio Button -->
+            <label for="recommed-1">
+                <input type="radio" id="recommed-1" 
+                       name="recommed"> Yes
+                  </input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio" id="recommed-2" 
+                       name="recommed"> No
+                  </input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio" id="recommed-3" 
+                       name="recommed"> Maybe
+                  </input>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label>Please Check Mark All Rules to Qualify
+                *
+                <small>(Check all that apply)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox" name="inp"> I understand that I will pay first (Once we begin messaging, I will ask for payment don't worry!)
+                  </input>
+              </label>
+            <label for="inp-2">
+                <input type="checkbox" name="inp"> I understand that there are no refunds.
+                  </input>
+            </label>
+            <label for="inp-3">
+                <input type="checkbox" name="inp"> I understand that I will need to communicate to create my vision.
+                  </input>
+            </label>
+            <label for="inp-4">
+                <input type="checkbox" name="inp"> I understand that outsourcing beads will add to my final price.
+                  </input>
+            </label>
+            <label for="inp-5">
+                <input type="checkbox" name="inp"> I understand that international shipping is not free, and will be included in your fee.
+                  </input>
+            </label>
+        </div>
+        <div class="form-control">
+            <label>Please check-mark that you will share a picture of your jewelry on your instagram story once received. You do not have to show your face. You do have to tag me so I can reshare. 
+                *                
+                <small>(Check all that apply)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox" name="inp"> I will
+                  </input>
+              </label>
+            <label for="inp-2">
+                <input type="checkbox" name="inp"> I feel uncomfortable (Its okay! Be honest&#9829;)
+                    </input>
+                </div>
+                <div class="form-control">
+                    <label>Would you like jewelry within your comfort zone or outside of your comfort zone?              
+                    
+                        <!-- Input Type Checkbox -->
+                    <label for="inp-1">
+                        <input type="checkbox" name="inp"> Within my comfort zone.
+                          </input>
+                      </label>
+                    <label for="inp-2">
+                        <input type="checkbox" name="inp"> Outside of my comfort zone.
+                            </input>
+                        </div>
+
+        
+    <div class="form-control">
+        <label for="comment">
+            What style are you going for (example: preppy, gothic, alternative, academia, minimal, clutter-core, maximalist, dainty, chunky etc.)?
+                            </label>
+                
+                            <!-- multi-line text input control -->
+                            <textarea name="comment" id="comment" 
+                                      placeholder="Enter your comment here">
+                            </textarea>
+                        </div>
+        <div class="form-control">
+             <label for="comment">
+                What celebrity/public figure (musician, actor, influencer, etc.) do you take style inspiration from?
+                                                </label>
+                                    
+                                                <!-- multi-line text input control -->
+                                                <textarea name="comment" id="comment" 
+                                                          placeholder="Enter your comment here">
+                                                </textarea>
+                                            </div>
+         <div class="form-control">
+                 <label for="comment">
+                    What colors do you wear the most?
+                                                                                   </label>
+                                                                       
+                                                                                   <!-- multi-line text input control -->
+                                                                                   <textarea name="comment" id="comment" 
+                                                                                             placeholder="Enter your comment here">
+                                                                                   </textarea>
+                                                                               </div>
+                                                                               <div class="form-control">
+                                                                                <label for="comment">
+                                                                                    What colors do you prefer? What are your favorite colors?
+                                                                                                                                                  </label>
+                                                                                                                                      
+                                                                                                                                                  <!-- multi-line text input control -->
+                                                                                                                                                  <textarea name="comment" id="comment" 
+                                                                                                                                                            placeholder="Enter your comment here">
+                                                                                                                                                  </textarea>
+                                                                                                                                              </div>
+        <div class="form-control">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment" 
+                      placeholder="Enter your comment here">
+            </textarea>
+        </div>
+        <div class="form-control">
+            <label for="comment">
+                All done! 
+Please message me on instagram once you're done! You can tell me what you'd like and the interaction will go from there :,) This is just an easier way to collect information and hopefully interactions will be quicker.
+            </label>
+
+        <!-- Multi-line Text Input Control -->
+        
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+</body>
+
+</html>
