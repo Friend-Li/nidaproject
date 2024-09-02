@@ -1,56 +1,40 @@
-from django.shortcuts import render, redirect
-from .models import Product, Cart, CartItem
+from django.shortcuts import render
+from .models import *
 from django.http import JsonResponse
 import json
-from django.contrib import messages
-import uuid
+
 # Create your views here.
 
-
-def index(request):
+def store(request):
     products = Product.objects.all()
-    
-    if request.user.is_authenticated:
-        cart, created = Cart.objects.get_or_create(user=request.user, completed=False)
-        
-    context = {"products":products, "cart": cart}
-    return render(request, "index.html", context)
-
+    context = {'products':products}
+    return render(request, 'store/store.html', context)
 
 def cart(request):
-    
-    cart = None
-    cartitems = []
-    
+
     if request.user.is_authenticated:
-        cart, created = Cart.objects.get_or_create(user=request.user, completed=False)
-        cartitems = cart.cartitems.all()
-    
-    context = {"cart":cart, "items":cartitems}
-    return render(request, "cart.html", context)
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        items = order.orderitem_set.all()
+    else:
+        items = []
+        order = {'get_cart_total':0, 'get_cart_items':0}
 
-def add_to_cart(request):
-    data = json.loads(request.body)
-    product_id = data["id"]
-    product = Product.objects.get(id=product_id)
-    
+    context = {'items':items, 'order':order}
+    return render(request, 'store/cart.html', context)
+
+def checkout(request):
     if request.user.is_authenticated:
-        cart, created = Cart.objects.get_or_create(user=request.user, completed=False)
-        cartitem, created =CartItem.objects.get_or_create(cart=cart, product=product)
-        cartitem.quantity += 1
-        cartitem.save()
-        
-        
-        num_of_item = cart.num_of_items
-        
-        print(cartitem)
-    return JsonResponse(num_of_item, safe=False)
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+        items = order.orderitem_set.all()
+    else:
+        items = []
+        order = {'get_cart_total':0, 'get_cart_items':0}
 
+    context = {'items':items, 'order':order}
+    return render(request, 'store/checkout.html', context)
 
-
-#def confirm_payment(request, pk):
-#    cart = Cart.objects.get(id=pk)
-#    cart.completed = True
-#    cart.save(0)
-#    messages.success(request, "payment made successfully")
-#    return redirect("index")
+def updateItem(request):
+    
+    return JsonResponse('Item was added', safe=False)
